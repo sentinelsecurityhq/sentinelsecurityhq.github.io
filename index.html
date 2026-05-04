@@ -2,514 +2,609 @@
 <html lang="en">
 
 <head>
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Security-Policy"
-    content="default-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src https://formspree.io; object-src 'none'; base-uri 'self'; form-action https://formspree.io; frame-ancestors 'none';">
+    content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'self' https://formspree.io; frame-ancestors 'none';">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <title>Sentinel Security Network Protection for Businesses</title>
+  <title>Sentinel - Network Security for Businesses</title>
   <meta name="description"
     content="Sentinel monitors your business network 24/7 and sends plain-English alerts when something looks wrong. No IT team required. Start with a free assessment.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <div class="grid-bg"></div>
+  <div class="page">
 
-  <nav id="mainNav">
-    <a href="#" class="nav-logo">
-      <svg class="logo-shield" viewBox="0 0 30 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M15 1.5L2.5 7V17.5C2.5 25.2 8.5 32 15 33.5C21.5 32 27.5 25.2 27.5 17.5V7L15 1.5Z" stroke="#3B82F6"
-          stroke-width="1.75" fill="rgba(59,130,246,0.1)" />
-        <path d="M9.5 17L13.5 21L20.5 13" stroke="#3B82F6" stroke-width="2.25" stroke-linecap="round"
-          stroke-linejoin="round" />
-      </svg>
-      <span>SENTINEL</span>
-    </a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#problem">The Problem</a></li>
-      <li><a href="#detect">Detection</a></li>
-      <li><a href="#how">How It Works</a></li>
-      <li><a href="#why">Why Sentinel</a></li>
-      <li><button class="btn btn-primary" id="navAssessmentBtn">Free Assessment</button></li>
-    </ul>
-    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
-  </nav>
-
-  <section class="hero" id="hero">
-    <div class="hero-glow"></div>
-    <div class="hero-content fade-in">
-      <div class="hero-eyebrow">Network Security for Businesses</div>
-      <h1>Your business is a target.<br><span class="line2">Most owners find out too late.</span></h1>
-      <p>Sentinel watches your network around the clock and sends you a plain-English message the moment something looks
-        wrong no IT team, no technical knowledge required.</p>
-      <div class="hero-buttons">
-        <button class="btn btn-primary btn-lg" id="heroAssessmentBtn">Get Free Assessment</button>
-        <a href="#problem" class="btn btn-outline btn-lg">See How It Works</a>
+    <!-- ============ NAV ============ -->
+    <nav class="nav" aria-label="Primary">
+      <div class="nav-inner">
+        <a href="#" class="brand">
+          <span class="brand-mark">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#7AA5FF" stroke-width="2.4" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4z" />
+              <path d="m9 12 2 2 4-4" />
+            </svg>
+          </span>
+          <span class="brand-name">SENTINEL</span>
+        </a>
+        <div class="nav-links">
+          <a href="#problem">The Problem</a>
+          <a href="#detection">Detection</a>
+          <a href="#how">How It Works</a>
+          <a href="#why">Why Sentinel</a>
+        </div>
+        <a href="#cta" class="nav-cta soft-hover-glow" id="navAssessmentBtn">Free Assessment
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M7 17 17 7" />
+            <path d="M7 7h10v10" />
+          </svg>
+        </a>
       </div>
-      <div class="hero-trust">
-        <span>No commitment required</span>
-        <span class="trust-sep">/</span>
-        <span>Takes under 30 minutes</span>
-        <span class="trust-sep">/</span>
-        <span>Available remotely or on-site</span>
-      </div>
-    </div>
-  </section>
+    </nav>
 
-  <section id="problem">
-    <div class="container fade-in">
-      <span class="section-tag">The Reality</span>
-      <h2 class="section-title">Businesses are the most targeted and the least protected.</h2>
-      <p class="section-sub">Attackers know that businesses hold valuable customer data, payment records, and
-        financial information but rarely have security systems watching for them.</p>
-      <div class="stats-grid">
-        <div class="stat-card">
-          <div class="stat-number" data-target="43" data-suffix="%">0%</div>
-          <div class="stat-label">of all cyberattacks worldwide specifically target businesses</div>
-          <div class="stat-source">Verizon Data Breach Investigations Report</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number" data-target="60" data-suffix="%">0%</div>
-          <div class="stat-label">of businesses that suffer a breach close permanently within 6 months</div>
-          <div class="stat-source">National Cyber Security Alliance</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number" data-target="175" data-prefix="$" data-suffix="K+">$0</div>
-          <div class="stat-label">average total financial loss for a business after a single attack</div>
-          <div class="stat-source">IBM Cost of a Data Breach Report</div>
-        </div>
-      </div>
-    </div>
-  </section>
+    <!-- ============ HERO ============ -->
+    <header class="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="wrap">
+        <span class="eyebrow reveal"><span class="dot"></span>Network security for businesses</span>
 
-  <section id="detect">
-    <div class="container fade-in">
-      <span class="section-tag">8+ Threat Types Monitored</span>
-      <h2 class="section-title">We watch for what attackers actually look for.</h2>
-      <p class="section-sub">Sentinel monitors your network continuously for the attack patterns that most frequently
-        hit business infrastructure the ones that rarely get caught until it's too late.</p>
-      <div class="detect-grid">
+        <h1 class="reveal" data-delay="1">
+          Your business is a target.<br>
+          <span class="accent">Most owners find out too late.</span>
+        </h1>
 
-        <div class="detect-card">
-          <div class="detect-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
-              stroke-linejoin="round" aria-hidden="true">
-              <rect x="2" y="3" width="20" height="13" rx="2" />
-              <path d="M8 21h8M12 16v5" />
-              <circle cx="17" cy="5.5" r="3.5" fill="var(--bg2)" stroke="currentColor" />
-              <path d="M17 4.2v1.2M17 7.1h.01" stroke-width="2" />
+        <p class="lead reveal" data-delay="2">
+          Sentinel watches your network around the clock and sends a plain English message the moment something looks
+          wrong. No IT team required. No technical knowledge needed.
+        </p>
+
+        <div class="cta-row reveal" data-delay="3">
+          <a href="#cta" class="btn btn-primary soft-hover-glow" id="heroAssessmentBtn">
+            Get Free Assessment
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14" />
+              <path d="m13 5 7 7-7 7" />
             </svg>
-          </div>
-          <h3>Unauthorized Devices</h3>
-          <p>Any device that connects to your network without authorization is flagged immediately rogue laptops,
-            unknown phones, or IoT devices that don't belong there.</p>
+          </a>
+          <a href="#how" class="btn btn-ghost soft-hover-glow">
+            See How It Works
+          </a>
         </div>
 
-        <div class="detect-card">
-          <div class="detect-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
-              stroke-linejoin="round" aria-hidden="true">
-              <circle cx="11" cy="11" r="8" />
-              <path d="M21 21l-4.35-4.35" />
-              <path d="M11 8v3M11 14h.01" stroke-width="2" />
-            </svg>
-          </div>
-          <h3>Network Reconnaissance</h3>
-          <p>Attackers probe networks before breaking in. We detect port scanning and mapping activity before they find
-            a way inside your systems.</p>
+        <div class="meta reveal" data-delay="4">
+          <span>No commitment</span>
+          <span>Under 30 minutes</span>
+          <span>Remote or on site</span>
         </div>
 
-        <div class="detect-card">
-          <div class="detect-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
-              stroke-linejoin="round" aria-hidden="true">
-              <rect x="3" y="11" width="18" height="11" rx="2" />
-              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-              <circle cx="12" cy="16" r="1.2" fill="currentColor" />
-            </svg>
-          </div>
-          <h3>Brute Force Attacks</h3>
-          <p>Hundreds of rapid login attempts against your routers, servers, or employee accounts are caught and flagged
-            in real time before access is gained.</p>
-        </div>
+        <!-- Hero shield visual represents protected network with live nodes -->
+        <div class="shield-stage reveal float-slow" data-delay="5" aria-hidden="true">
+          <div class="shield-wrap">
+            <div class="shield-halo"></div>
 
-        <div class="detect-card">
-          <div class="detect-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
-              stroke-linejoin="round" aria-hidden="true">
-              <circle cx="12" cy="12" r="10" />
-              <path d="M2 12h20" />
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-              <line x1="12" y1="8" x2="12" y2="8.01" stroke-width="3" />
-            </svg>
-          </div>
-          <h3>Malicious Connections</h3>
-          <p>DNS requests to known malware distribution servers, command-and-control infrastructure, and data
-            exfiltration endpoints are identified and blocked.</p>
-        </div>
+            <div class="ring r1"></div>
+            <div class="ring r2"></div>
+            <div class="ring r3"></div>
+            <div class="ring r4"></div>
 
-        <div class="detect-card">
-          <div class="detect-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
-              stroke-linejoin="round" aria-hidden="true">
-              <path d="M8 3L4 7l4 4" />
-              <path d="M4 7h16" />
-              <path d="M16 21l4-4-4-4" />
-              <path d="M20 17H4" />
-            </svg>
-          </div>
-          <h3>Man-in-the-Middle Attacks</h3>
-          <p>ARP spoofing and traffic interception attempts where attackers reroute your data through their devices
-            are detected before any information is compromised.</p>
-        </div>
+            <div class="orbit o1"><span class="dot-blue"></span></div>
+            <div class="orbit o2"><span class="dot-blue"></span></div>
+            <div class="orbit o3"><span class="dot-soft"></span></div>
 
-        <div class="detect-card">
-          <div class="detect-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
-              stroke-linejoin="round" aria-hidden="true">
-              <path d="M5 12h14M12 5l7 7-7 7" />
-              <path d="M3 19h18" stroke-width="1" opacity=".35" />
-            </svg>
-          </div>
-          <h3>Data Exfiltration</h3>
-          <p>Unusual outbound data volumes a sign that customer records, financial files, or employee data may be
-            quietly leaving your network trigger an immediate alert.</p>
-        </div>
-        <div class='detect-card'>
-          <div class='detect-icon'>
-            <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.75' stroke-linecap='round'
-              stroke-linejoin='round' aria-hidden='true'>
-              <path d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z' />
-              <path d='M9 12l2 2 4-4' />
-            </svg>
-          </div>
-          <h3>Ransomware Activity</h3>
-          <p>Rapid file encryption patterns and suspicious mass-write behavior are detected early before ransomware can
-            lock your systems and demand payment.</p>
-        </div>
+            <div class="node n1">
+              <div class="node-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="2" y="4" width="20" height="14" rx="2" />
+                  <path d="M2 8h20" />
+                </svg>
+              </div>
+              <div class="node-label"><span class="lab-dot ok"></span>Server&nbsp;01<span class="lab-mono">192.168.1.10</span></div>
+            </div>
+            <div class="node n2">
+              <div class="node-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2" />
+                  <path d="M8 21h8" />
+                  <path d="M12 17v4" />
+                </svg>
+              </div>
+              <div class="node-label"><span class="lab-dot ok"></span>Workstation<span class="lab-mono">12 active</span></div>
+            </div>
+            <div class="node n3">
+              <div class="node-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M5 12.55a11 11 0 0 1 14.08 0" />
+                  <path d="M1.42 9a16 16 0 0 1 21.16 0" />
+                  <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
+                  <path d="M12 20h.01" />
+                </svg>
+              </div>
+              <div class="node-label"><span class="lab-dot ok"></span>Wi-Fi<span class="lab-mono">42 devices</span></div>
+            </div>
+            <div class="node n4">
+              <div class="node-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="2" y="6" width="20" height="12" rx="2" />
+                  <circle cx="6" cy="12" r="1.2" fill="currentColor" />
+                  <circle cx="10" cy="12" r="1.2" fill="currentColor" />
+                  <circle cx="14" cy="12" r="1.2" fill="currentColor" />
+                  <circle cx="18" cy="12" r="1.2" fill="currentColor" />
+                </svg>
+              </div>
+              <div class="node-label"><span class="lab-dot ok"></span>Router<span class="lab-mono">throughput norm</span></div>
+            </div>
 
-        <div class='detect-card'>
-          <div class='detect-icon'>
-            <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.75' stroke-linecap='round'
-              stroke-linejoin='round' aria-hidden='true'>
-              <path d='M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z' />
-              <path d='M22 6l-10 7L2 6' />
+            <svg class="links" viewBox="0 0 800 480" preserveAspectRatio="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="lk" x1="0" x2="1">
+                  <stop offset="0" stop-color="rgba(120,170,255,0.55)" />
+                  <stop offset="1" stop-color="rgba(120,170,255,0)" />
+                </linearGradient>
+              </defs>
+              <line x1="400" y1="240" x2="80" y2="120" stroke="url(#lk)" stroke-width="1" />
+              <line x1="400" y1="240" x2="720" y2="120" stroke="url(#lk)" stroke-width="1" />
+              <line x1="400" y1="240" x2="80" y2="380" stroke="url(#lk)" stroke-width="1" />
+              <line x1="400" y1="240" x2="720" y2="380" stroke="url(#lk)" stroke-width="1" />
             </svg>
-          </div>
-          <h3>Phishing and Credential Harvesting</h3>
-          <p>Connections to known phishing domains and credential-harvesting sites are blocked before any employee
-            account information can be captured.</p>
-        </div>
 
+            <div class="shield-core glass liquid-border liquid-glow">
+              <div class="shield-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4z" />
+                  <path d="m9 12 2 2 4-4" />
+                </svg>
+              </div>
+              <div class="shield-status">
+                <span class="status-dot"></span>
+                <span class="status-text">Network Protected</span>
+              </div>
+              <div class="shield-meta">
+                <span><b>42</b> devices</span>
+                <span class="sep"></span>
+                <span><b>0</b> threats</span>
+                <span class="sep"></span>
+                <span><b>24/7</b> monitor</span>
+              </div>
+            </div>
+          </div>
+        </div>
 
       </div>
-    </div>
-  </section>
+    </header>
 
-  <section id="how">
-    <div class="container fade-in">
-      <span class="section-tag">How It Works</span>
-      <h2 class="section-title">Protection that runs quietly in the background.</h2>
-      <p class="section-sub">No complicated setup. No maintenance. Sentinel is designed to run without any day-to-day
-        involvement from you and alert you only when it matters.</p>
-      <div class="steps">
-        <div class="steps-line"></div>
-        <div class="step">
-          <div class="step-num">1</div>
-          <h3>We Connect</h3>
-          <p>We set up passive monitoring on your network in under an hour. Nothing installs on your devices, and
-            there's no disruption to your day.</p>
+    <!-- ============ PROBLEM ============ -->
+    <section id="problem">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow"><span class="dot"></span>The reality</span>
+          <h2>Businesses are the most<br>targeted and the least protected.</h2>
+          <p>Attackers know that businesses hold valuable customer data, payment records, and financial information,
+            but rarely have security systems watching for them.</p>
         </div>
-        <div class="step">
-          <div class="step-num">2</div>
-          <h3>We Learn</h3>
-          <p>Sentinel builds a baseline of what normal looks like on your specific network your devices, your traffic
-            patterns, your typical hours.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">3</div>
-          <h3>We Alert</h3>
-          <p>When something deviates from that baseline, you get a clear message explaining what happened and a
-            step-by-step action plan. No guesswork.</p>
+
+        <div class="stat-grid">
+          <div class="stat-card glass reveal reveal-stagger liquid-border soft-hover-glow" data-delay="1">
+            <div class="num" data-count-to="43" data-suffix="%">43%</div>
+            <div class="label">of all cyberattacks worldwide specifically target small and mid-sized businesses</div>
+            <div class="src">Verizon Data Breach Investigations Report</div>
+          </div>
+          <div class="stat-card glass reveal reveal-stagger liquid-border soft-hover-glow" data-delay="2">
+            <div class="num" data-count-to="60" data-suffix="%">60%</div>
+            <div class="label">of businesses that suffer a breach close permanently within six months</div>
+            <div class="src">National Cyber Security Alliance</div>
+          </div>
+          <div class="stat-card glass reveal reveal-stagger liquid-border soft-hover-glow" data-delay="3">
+            <div class="num" data-count-to="175" data-prefix="$" data-suffix="K+">$175K+</div>
+            <div class="label">average financial loss for a business after a single attack</div>
+            <div class="src">IBM Cost of a Data Breach Report</div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="alert">
-    <div class="container fade-in">
-      <span class="section-tag">Real Alert Example</span>
-      <h2 class="section-title">This is what you'd actually receive.</h2>
-      <p class="section-sub">Every alert is written for a business owner, not a network engineer. Clear context, clear
-        instructions, no technical background required.</p>
-      <div class="alert-container">
-        <div class="alert-card">
-          <div class="alert-header">
-            <span class="alert-badge">CRITICAL</span>
-            <span class="alert-header-text">Detected 12 seconds ago Main Office Network</span>
+    <!-- ============ DETECTION ============ -->
+    <section id="detection">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow"><span class="dot"></span>8 threat types monitored</span>
+          <h2>We watch for what attackers<br>actually look for.</h2>
+          <p>Sentinel monitors your network continuously for the attack patterns that most frequently hit business
+            infrastructure, the ones that rarely get caught until it is too late.</p>
+        </div>
+
+        <div class="feat-grid">
+          <div class="feat-card glass reveal reveal-stagger liquid-border soft-hover-glow" data-delay="1">
+            <div class="feat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <path d="M8 21h8" />
+                <path d="M12 17v4" />
+                <circle cx="17" cy="8" r="3" fill="currentColor" opacity=".25" />
+              </svg>
+            </div>
+            <h3>Unauthorized devices</h3>
+            <p>Any device that connects to your network without authorization is flagged immediately. Rogue laptops,
+              unknown phones, or IoT devices that do not belong there.</p>
+          </div>
+          <div class="feat-card glass reveal reveal-stagger liquid-border soft-hover-glow" data-delay="2">
+            <div class="feat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="11" cy="11" r="7" />
+                <path d="m20 20-3.5-3.5" />
+              </svg>
+            </div>
+            <h3>Network reconnaissance</h3>
+            <p>Attackers probe networks before breaking in. We detect port scanning and mapping activity before they
+              find a way inside your systems.</p>
+          </div>
+          <div class="feat-card glass reveal reveal-stagger liquid-border soft-hover-glow" data-delay="3">
+            <div class="feat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" />
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              </svg>
+            </div>
+            <h3>Brute force attacks</h3>
+            <p>Hundreds of rapid login attempts against your routers, servers, or employee accounts are caught and
+              flagged in real time before access is gained.</p>
+          </div>
+          <div class="feat-card glass reveal reveal-stagger liquid-border soft-hover-glow" data-delay="1">
+            <div class="feat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M3 12h18" />
+                <path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18z" />
+              </svg>
+            </div>
+            <h3>Malicious connections</h3>
+            <p>DNS requests to known malware distribution servers, command and control infrastructure, and data
+              exfiltration endpoints are identified and blocked.</p>
+          </div>
+          <div class="feat-card glass reveal reveal-stagger liquid-border soft-hover-glow" data-delay="2">
+            <div class="feat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M3 7h13" />
+                <path d="m13 4 3 3-3 3" />
+                <path d="M21 17H8" />
+                <path d="m11 14-3 3 3 3" />
+              </svg>
+            </div>
+            <h3>Man in the middle</h3>
+            <p>ARP spoofing and traffic interception attempts where attackers reroute your data through their devices
+              are detected before any information is captured.</p>
+          </div>
+          <div class="feat-card glass reveal reveal-stagger liquid-border soft-hover-glow" data-delay="3">
+            <div class="feat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M12 15V3" />
+                <path d="m6 9 6-6 6 6" />
+                <rect x="3" y="15" width="18" height="6" rx="2" />
+              </svg>
+            </div>
+            <h3>Data exfiltration</h3>
+            <p>Unusual outbound data volumes, a sign that customer records, financial files, or employee data may be
+              quietly leaving your network, are caught early.</p>
+          </div>
+          <div class="feat-card glass reveal reveal-stagger liquid-border soft-hover-glow" data-delay="1">
+            <div class="feat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4z" />
+                <path d="M9 12h6" />
+                <path d="M12 9v6" />
+              </svg>
+            </div>
+            <h3>Ransomware activity</h3>
+            <p>Rapid file encryption patterns and suspicious mass write behavior are detected early, before ransomware
+              can lock your systems and demand payment.</p>
+          </div>
+          <div class="feat-card glass reveal reveal-stagger liquid-border soft-hover-glow" data-delay="2">
+            <div class="feat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <path d="m3 7 9 6 9-6" />
+              </svg>
+            </div>
+            <h3>Phishing &amp; credentials</h3>
+            <p>Connections to known phishing domains and credential harvesting sites are blocked before any employee
+              account information can be captured.</p>
+          </div>
+          <div class="feat-card feat-card-accent glass reveal reveal-stagger liquid-border soft-hover-glow" data-delay="3">
+            <div class="feat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 7v5l3 2" />
+              </svg>
+            </div>
+            <h3>Continuously updated</h3>
+            <p>Our detection rules are tuned weekly against fresh threat intelligence, so the patterns we watch for
+              tomorrow reflect what is happening on real networks today.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section id="how">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow"><span class="dot"></span>How it works</span>
+          <h2>Protection that runs<br>quietly in the background.</h2>
+          <p>No complicated setup. No maintenance. Sentinel is designed to run without any day to day involvement from
+            you, and alert you only when it matters.</p>
+        </div>
+
+        <div class="steps">
+          <div class="step reveal reveal-stagger liquid-border soft-hover-glow" data-delay="1">
+            <div class="num">1</div>
+            <h3>We connect</h3>
+            <p>Passive monitoring is set up in under an hour. Nothing installs on your devices. No disruption to your
+              day.</p>
+          </div>
+          <div class="step reveal reveal-stagger liquid-border soft-hover-glow" data-delay="2">
+            <div class="num">2</div>
+            <h3>We learn</h3>
+            <p>Sentinel builds a baseline of what normal looks like on your network. Your devices, your traffic
+              patterns, your typical hours.</p>
+          </div>
+          <div class="step reveal reveal-stagger liquid-border soft-hover-glow" data-delay="3">
+            <div class="num">3</div>
+            <h3>We alert</h3>
+            <p>When something deviates from baseline, you get a clear message explaining what happened and a step by
+              step action plan.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ALERT EXAMPLE ============ -->
+    <section id="alert">
+      <div class="wrap">
+        <div class="section-head center reveal">
+          <span class="eyebrow"><span class="dot"></span>Real alert example</span>
+          <h2>This is what you would actually receive.</h2>
+          <p>Every alert is written for a business owner, not a network engineer. Clear context, clear instructions,
+            no technical background required.</p>
+        </div>
+
+        <div class="alert-card glass reveal" data-delay="1">
+          <div class="alert-head">
+            <span class="alert-pill"><i></i> Critical</span>
+            <span class="meta-text">Detected 12 seconds ago</span>
+            <span class="meta-text meta-text-right">Main Office Network</span>
           </div>
           <div class="alert-body">
             <h3>Unauthorized Device Connected to Your Network</h3>
-            <div class="alert-section">
-              <h4>What happened</h4>
-              <p>A device we don't recognize just joined your office Wi-Fi. Its hardware address doesn't match any of
-                your registered equipment, and it has already attempted to communicate with three other devices on your
-                network.</p>
+
+            <div class="what">
+              <div class="lab">What happened</div>
+              <p>A device we do not recognize just joined your office Wi&#8209;Fi. Its hardware address does not match
+                any of your registered equipment, and it has already attempted to communicate with three other devices
+                on your network.</p>
             </div>
-            <div class="alert-section">
-              <h4>What to do right now</h4>
-              <ol>
-                <li>Open your router admin panel at <strong>192.168.1.1</strong></li>
-                <li>Go to <strong>Connected Devices</strong> or <strong>Device List</strong></li>
-                <li>Find the entry labelled <strong>"unknown 38:f9:d3"</strong></li>
-                <li>Select <strong>Block Device</strong> to remove it immediately</li>
-                <li>Change your Wi-Fi password under <strong>Wireless Settings</strong></li>
-              </ol>
-            </div>
+
+            <div class="lab">What to do right now</div>
+            <ol>
+              <li>Open your router admin panel at <code>192.168.1.1</code></li>
+              <li>Go to <strong>Connected Devices</strong> or <strong>Device List</strong></li>
+              <li>Find the entry labelled <strong>"unknown 38:f9:d3"</strong></li>
+              <li>Select <strong>Block Device</strong> to remove it immediately</li>
+              <li>Change your Wi&#8209;Fi password under <strong>Wireless Settings</strong></li>
+            </ol>
           </div>
-          <div class="alert-meta">
-            <span class="meta-item meta-critical">
-              <svg viewBox="0 0 12 12" aria-hidden="true">
-                <circle cx="6" cy="6" r="5" fill="#EF4444" />
-              </svg>
-              Severity: Critical
-            </span>
-            <span class="meta-item">
-              <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <circle cx="6" cy="6" r="5" />
-                <path d="M6 3v3l2 2" />
-              </svg>
-              Response: Immediate
-            </span>
-            <span class="meta-item">
-              <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <path d="M6 1C4.3 1 3 2.3 3 4c0 2.5 3 7 3 7s3-4.5 3-7c0-1.7-1.3-3-3-3z" />
-                <circle cx="6" cy="4" r="1" fill="currentColor" />
-              </svg>
-              Main Office
-            </span>
+          <div class="alert-foot">
+            <span class="pip"><i></i> Severity: Critical</span>
+            <span class="pip">Response: Immediate</span>
+            <span class="pip">Main Office</span>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="testimonials">
-    <div class="container fade-in">
-      <span class="section-tag">From Our Clients</span>
-      <h2 class="section-title">Business owners who made the call.</h2>
-      <p class="section-sub">Here's what they found when they finally looked at what was happening on their networks.
-      </p>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <p class="testimonial-quote">Three of our point-of-sale terminals were connecting to outside servers every
-            night at 2am. We had no idea. Sentinel flagged it on day one. We were days away from a serious breach.</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">MC</div>
-            <div>
-              <div class="testimonial-name">Mike Chen</div>
-              <div class="testimonial-role">Owner, Chen's Restaurant Group</div>
-            </div>
-          </div>
+    <!-- ============ WHY SENTINEL ============ -->
+    <section id="why">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow"><span class="dot"></span>Why Sentinel</span>
+          <h2>Enterprise grade protection.<br>Built for businesses without IT.</h2>
+          <p>Most security products are built for companies with full IT departments. Sentinel is built for the
+            businesses that do not have one.</p>
         </div>
-        <div class="testimonial-card">
-          <p class="testimonial-quote">After ransomware hit a practice two blocks from mine, I needed something I could
-            actually manage. Sentinel's alerts are the first security alerts I've ever been able to act on without
-            calling someone for help.</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">SO</div>
-            <div>
-              <div class="testimonial-name">Sarah Okafor</div>
-              <div class="testimonial-role">Practice Manager, Lakeside Dental</div>
+
+        <div class="why-grid">
+          <div class="why-card glass reveal reveal-stagger liquid-border soft-hover-glow" data-delay="1">
+            <div class="feat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+              </svg>
             </div>
+            <h3>Written for owners</h3>
+            <p>Every alert explains what happened, why it matters, and what to do, in plain language. No event IDs.
+              No log files.</p>
           </div>
-        </div>
-        <div class="testimonial-card">
-          <p class="testimonial-quote">Client confidentiality is non-negotiable in our line of work. Within the first
-            week, Sentinel identified two devices on our network we couldn't account for. That alone justified the whole
-            thing.</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">DR</div>
-            <div>
-              <div class="testimonial-name">David Reyes</div>
-              <div class="testimonial-role">Partner, Reyes &amp; Associates Law</div>
+          <div class="why-card glass reveal reveal-stagger liquid-border soft-hover-glow" data-delay="2">
+            <div class="feat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="12" r="4" />
+                <path d="M12 2v2" />
+                <path d="M12 20v2" />
+                <path d="m4.93 4.93 1.41 1.41" />
+                <path d="m17.66 17.66 1.41 1.41" />
+                <path d="M2 12h2" />
+                <path d="M20 12h2" />
+                <path d="m4.93 19.07 1.41-1.41" />
+                <path d="m17.66 6.34 1.41-1.41" />
+              </svg>
             </div>
+            <h3>Active 24 hours</h3>
+            <p>Most attacks happen outside business hours. Sentinel monitors nights, weekends, and holidays,
+              regardless of the time.</p>
+          </div>
+          <div class="why-card glass reveal reveal-stagger liquid-border soft-hover-glow" data-delay="3">
+            <div class="feat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+            </div>
+            <h3>Tailored to you</h3>
+            <p>Sentinel learns what normal looks like for your business. Fewer false alarms. Faster detection of real
+              threats.</p>
+          </div>
+          <div class="why-card glass reveal reveal-stagger liquid-border soft-hover-glow" data-delay="4">
+            <div class="feat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3" />
+                <path
+                  d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 0 1-4 0v-.1A1.7 1.7 0 0 0 9 19.4a1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 0 1 0-4h.1A1.7 1.7 0 0 0 4.6 9a1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 0 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 0 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z" />
+              </svg>
+            </div>
+            <h3>Privacy first</h3>
+            <p>Sentinel inspects metadata, never the contents of your communications. Your data stays yours.</p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="why">
-    <div class="container fade-in">
-      <span class="section-tag">Why Sentinel</span>
-      <h2 class="section-title">Enterprise-grade protection. Built for businesses.</h2>
-      <p class="section-sub">Most security products are built for companies with full IT departments. Sentinel is built
-        for businesses that don't have one.</p>
-      <div class="why-grid">
-        <div class="why-card">
-          <div class="why-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
+    <!-- ============ FINAL CTA ============ -->
+    <section id="cta" class="final">
+      <div class="wrap container">
+        <span class="eyebrow eyebrow-cta reveal"><span class="dot"></span>Free network assessment</span>
+        <h2 class="h2-cta reveal" data-delay="1">Find out what is on your network for free.</h2>
+        <p class="lead reveal" data-delay="2">Most business owners are surprised by what a free assessment turns up.
+          There is no obligation, no sales pressure, and no charge. Just a clear picture of where you stand.</p>
+
+        <div class="cta-row reveal" data-delay="3">
+          <a class="btn btn-primary soft-hover-glow" id="ctaAssessmentBtn"
+            href="mailto:contact@sentinelcybers.com?subject=Free%20Network%20Assessment%20Request&body=Hi%20Sentinel%2C%0A%0AI%27d%20like%20to%20request%20a%20free%20network%20assessment.%0A%0ABusiness%20name%3A%0APhone%3A%0APreferred%20time%3A%0A">
+            Request Free Assessment
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14" />
+              <path d="m13 5 7 7-7 7" />
+            </svg>
+          </a>
+          <a class="btn btn-ghost soft-hover-glow" href="#detection">View what we monitor</a>
+        </div>
+
+        <div class="micro reveal" data-delay="4">Typically takes 20 to 30 minutes &nbsp;&middot;&nbsp; Available remotely or
+          on site</div>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer>
+      <div class="wrap foot">
+        <div class="brand-tiny">
+          <span class="brand-mark brand-mark-tiny">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#7AA5FF" stroke-width="2.4" stroke-linecap="round"
               stroke-linejoin="round" aria-hidden="true">
-              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+              <path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4z" />
             </svg>
-          </div>
-          <h3>Written for Business Owners</h3>
-          <p>Every alert explains what happened, why it matters, and exactly what to do in plain language. No event
-            IDs, no log files, no technical background needed.</p>
+          </span>
+          SENTINEL
         </div>
-        <div class="why-card">
-          <div class="why-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
-              stroke-linejoin="round" aria-hidden="true">
-              <circle cx="12" cy="12" r="3" />
-              <path
-                d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
-            </svg>
-          </div>
-          <h3>Active 24 Hours a Day</h3>
-          <p>Most attacks happen outside business hours. Sentinel monitors your network nights, weekends, and holidays
-            and alerts you regardless of what time it is.</p>
+        <div class="legal">
+          <span>&copy; 2026 Sentinel Security. All rights reserved.</span>
+          <a href="mailto:contact@sentinelcybers.com">contact@sentinelcybers.com</a>
         </div>
-        <div class="why-card">
-          <div class="why-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
-              stroke-linejoin="round" aria-hidden="true">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-            </svg>
+      </div>
+    </footer>
+
+    <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle"
+      aria-hidden="true">
+      <div class="modal glass liquid-border" id="modal">
+        <button class="modal-close" id="modalCloseBtn" aria-label="Close dialog">&times;</button>
+        <div class="modal-inner">
+          <div class="modal-left">
+            <div class="modal-tag">Free network assessment</div>
+            <h2 id="modalTitle">See what is really on your network.</h2>
+            <p>In under 30 minutes, we will give you a clear picture of connected devices, network activity, and
+              potential exposure at no cost and with no obligation.</p>
+            <ul class="modal-benefits">
+              <li>Identify unknown devices connected to your network</li>
+              <li>Review suspicious activity and early warning signs</li>
+              <li>Get a clear next-step summary for your business</li>
+            </ul>
           </div>
-          <h3>Tailored to Your Network</h3>
-          <p>Sentinel learns what normal looks like for your business specifically your devices, your schedule, your
-            traffic. That means fewer false alarms and faster detection of real threats.</p>
+
+          <div class="modal-right">
+            <form id="assessmentForm" action="https://formspree.io/f/xgororkn" method="POST" novalidate>
+              <input type="hidden" name="_subject" value="New Free Assessment Request">
+              <div class="form-group">
+                <label for="fname">Your Name *</label>
+                <input type="text" id="fname" name="name" placeholder="John Smith" autocomplete="name" maxlength="100"
+                  required>
+                <span class="field-error">Please enter your name</span>
+              </div>
+              <div class="form-group">
+                <label for="fbusiness">Business Name *</label>
+                <input type="text" id="fbusiness" name="business" placeholder="Acme Consulting"
+                  autocomplete="organization" maxlength="120" required>
+                <span class="field-error">Please enter your business name</span>
+              </div>
+              <div class="form-group">
+                <label for="femail">Business Email *</label>
+                <input type="email" id="femail" name="email" placeholder="you@yourbusiness.com" autocomplete="email"
+                  maxlength="254" required>
+                <span class="field-error">Please enter a valid email address</span>
+              </div>
+              <div class="form-group">
+                <label for="fphone">Phone Number <span class="optional">(optional)</span></label>
+                <input type="tel" id="fphone" name="phone" placeholder="(555) 000-0000" autocomplete="tel"
+                  maxlength="30">
+              </div>
+              <div class="form-group">
+                <label for="fsize">Number of Employees <span class="optional">(optional)</span></label>
+                <select id="fsize" name="employees">
+                  <option value="">Select a range</option>
+                  <option>1-5</option>
+                  <option>6-15</option>
+                  <option>16-50</option>
+                  <option>51-100</option>
+                  <option>100+</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary soft-hover-glow btn-full">Send My Request</button>
+              <p class="form-note">We respond within one business day.</p>
+            </form>
+            <div class="form-success" id="formSuccess">
+              <h3>Request received.</h3>
+              <p>Your request has been submitted. You can also reach us directly at <a
+                  href="mailto:contact@sentinelcybers.com">contact@sentinelcybers.com</a>.</p>
+              <p>We will be in touch within one business day.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </section>
 
-  <section class="footer-cta">
-    <div class="container fade-in">
-      <h2>Find out what's on your network for free.</h2>
-      <p>Most business owners are surprised by what a free assessment turns up. There's no obligation, no sales
-        pressure, and no charge. Just a clear picture of where you stand.</p>
-      <button class="btn btn-primary btn-lg" id="ctaAssessmentBtn">Request Free Assessment</button>
-      <p class="cta-note">Typically takes 20 30 minutes. Available remotely or on-site.</p>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2026 Sentinel Security. All rights reserved.&nbsp;&nbsp;|&nbsp;&nbsp;<a
-        href="mailto:contact@sentinelcybers.com">contact@sentinelcybers.com</a></p>
-  </footer>
-
-  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle"
-    aria-hidden="true">
-    <div class="modal" id="modal">
-      <button class="modal-close" id="modalCloseBtn" aria-label="Close dialog">&times;</button>
-      <div class="modal-inner">
-
-        <div class="modal-left">
-          <div class="modal-tag">Free Network Assessment</div>
-          <h2 id="modalTitle">See what's really on your network.</h2>
-          <p>In under 30 minutes, we'll give you a complete picture of every device, connection, and potential exposure
-            on your network at no cost and with no obligation.</p>
-          <ul class="modal-benefits">
-            <li>
-              <svg class="check-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                <circle cx="10" cy="10" r="9" stroke="#3B82F6" stroke-width="1.5" />
-                <path d="M6 10l3 3 5-5" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-              Full inventory of every device on your network
-            </li>
-            <li>
-              <svg class="check-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                <circle cx="10" cy="10" r="9" stroke="#3B82F6" stroke-width="1.5" />
-                <path d="M6 10l3 3 5-5" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-              Open ports and unprotected services identified
-            </li>
-            <li>
-              <svg class="check-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                <circle cx="10" cy="10" r="9" stroke="#3B82F6" stroke-width="1.5" />
-                <path d="M6 10l3 3 5-5" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-              Any suspicious ongoing connections flagged
-            </li>
-            <li>
-              <svg class="check-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                <circle cx="10" cy="10" r="9" stroke="#3B82F6" stroke-width="1.5" />
-                <path d="M6 10l3 3 5-5" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-              Plain-English summary of your current risk level
-            </li>
-          </ul>
-        </div>
-
-        <div class="modal-right">
-          <form id="assessmentForm" action="https://formspree.io/f/xgororkn" method="POST" novalidate>
-            <input type="hidden" name="_subject" value="New Free Assessment Request">
-            <input type="hidden" name="_next" value="https://sentinelcybers.com">
-            <div class="form-group">
-              <label for="fname">Your Name *</label>
-              <input type="text" id="fname" name="name" placeholder="John Smith" autocomplete="name" maxlength="100"
-                required>
-              <span class="field-error">Please enter your name</span>
-            </div>
-            <div class="form-group">
-              <label for="fbusiness">Business Name *</label>
-              <input type="text" id="fbusiness" name="business" placeholder="Acme Consulting"
-                autocomplete="organization" maxlength="120" required>
-              <span class="field-error">Please enter your business name</span>
-            </div>
-            <div class="form-group">
-              <label for="femail">Business Email *</label>
-              <input type="email" id="femail" name="email" placeholder="you@yourbusiness.com" autocomplete="email"
-                maxlength="254" required>
-              <span class="field-error">Please enter a valid email address</span>
-            </div>
-            <div class="form-group">
-              <label for="fphone">Phone Number <span class="optional">(optional)</span></label>
-              <input type="tel" id="fphone" name="phone" placeholder="(555) 000-0000" autocomplete="tel" maxlength="30">
-            </div>
-            <div class="form-group">
-              <label for="fsize">Number of Employees <span class="optional">(optional)</span></label>
-              <select id="fsize" name="employees">
-                <option value="">Select a range</option>
-                <option>1 5</option>
-                <option>6 15</option>
-                <option>16 50</option>
-                <option>51 100</option>
-                <option>100+</option>
-              </select>
-            </div>
-            <button type="submit" class="btn btn-primary btn-full">Send My Request</button>
-            <p class="form-note">We respond within one business day.</p>
-          </form>
-          <div class="form-success" id="formSuccess">
-            <svg viewBox="0 0 60 60" fill="none" width="56" height="56" aria-hidden="true">
-              <circle cx="30" cy="30" r="28" stroke="#3B82F6" stroke-width="2" />
-              <path d="M18 30l9 9 15-15" stroke="#3B82F6" stroke-width="2.5" stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg>
-            <h3>Request received.</h3>
-            <p>Your request has been submitted. You can also reach us directly at <a
-                href="mailto:contact@sentinelcybers.com">contact@sentinelcybers.com</a>.</p>
-            <p>We'll be in touch within one business day.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
   </div>
 
   <script src="script.js"></script>
